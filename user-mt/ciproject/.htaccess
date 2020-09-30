@@ -3,3 +3,8 @@ RewriteCond $1 !^(index\.php|resources|robots\.txt)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L,QSA] 
+RewriteRule ^series/([_a-zA-Z0-9\-\.]+)-([0-9]+)/news(/page/([0-9]+))?/?$ /wp-content/themes/cricket15/page-series-news.php?ccdata=$2&type=news&page=$4 [NC,PT,L,QSA]
+RewriteRule ^series/([_a-zA-Z0-9\-\.]+)-([0-9]+)/articles(/page/([0-9]+))?/?$ /wp-content/themes/cricket15/page-series-news.php?ccdata=$2&type=articles&page=$4 [NC,PT,L,QSA]
+RewriteRule ^series/([_a-zA-Z0-9\-\.]+)-([0-9]+)/photo-gallery(/page/([0-9]+))?/?$ /wp-content/themes/cricket15/page-series-news.php?ccdata=$2&type=photos&page=$4 [NC,PT,L,QSA]
+RewriteRule ^series/([_a-zA-Z0-9\-\.]+)-([0-9]+)/videos(/page/([0-9]+))?/?$ /wp-content/themes/cricket15/page-series-news.php?ccdata=$2&type=videos&page=$4 [NC,PT,L,QSA]
+
